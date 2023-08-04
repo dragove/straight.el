@@ -148,10 +148,8 @@
       (setq version :gamma))
     (with-current-buffer
         (url-retrieve-synchronously
-         (format
-          (concat "https://raw.githubusercontent.com/"
-                  "radian-software/straight.el/install/%s/straight.el")
-          (substring (symbol-name version) 1))
+          (concat "https://ghproxy.com/https://raw.githubusercontent.com/"
+                  "dragove/straight.el/master/straight.el")
          'silent 'inhibit-cookies)
       ;; In case of 404, that means the version identifier is unknown.
       ;; This will happen when I screw up, or if the user forks

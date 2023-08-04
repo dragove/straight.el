@@ -6932,8 +6932,8 @@ Interactively, or when MESSAGE is non-nil, show in the echo area."
       (unless (file-exists-p bootstrap-file)
         (with-current-buffer
             (url-retrieve-synchronously
-             (concat "https://raw.githubusercontent.com/"
-                     "radian-software/straight.el/develop/install.el")
+             (concat "https://ghproxy.com/https://raw.githubusercontent.com/"
+                     "dragove/straight.el/master/install.el")
              'silent 'inhibit-cookies)
           (goto-char (point-max))
           (eval-print-last-sexp)))
